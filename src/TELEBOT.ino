@@ -9,14 +9,14 @@
 // // #define DONT_HOME_1_AND_2
 // #define DONT_HOME_2
 // /////////////////////////////////////////////////////////////////
-// #define MICRO_STEPPING_WHEEL 8
+// #define WHEEL_MICRO_STEPPING 8
 // #define MICRO_STEPPING_ARM 8
 // #define ROBOT_STEPPER_MAX_POSITION_0 485 * MICRO_STEPPING_ARM
 // #define ROBOT_STEPPER_MAX_POSITION_1 530 * MICRO_STEPPING_ARM
 // #define ROBOT_STEPPER_MAX_POSITION_2 1030 * MICRO_STEPPING_ARM
 // #define HOMING_SPEED 145 * MICRO_STEPPING_ARM
 // #define HOMING_ACCELERATION 14.5 * MICRO_STEPPING_ARM
-// #define WHEEL_STEPPER_MAX_SPEED 375 * MICRO_STEPPING_WHEEL  // 375 normal
+// #define WHEEL_STEPPER_MAX_SPEED 375 * WHEEL_MICRO_STEPPING  // 375 normal
 // /////////////////////////////////////////////////////////////////
 // #define CONNECTION_TIMEOUT_IN_MS 750
 // /////////////////////////////////////////////////////////////////
@@ -159,7 +159,7 @@
 //     /////// HOMING SEQUENCE //////
 //     // #ifdef HOME_AT_STARTUP
 
-//     //   // HOME_STEPPER(ROBOT_STEPPER_MOTORS[0], END_SWITCH_0);
+//       // HOME_STEPPER(ROBOT_STEPPER_MOTORS[0], END_SWITCH_0);
 //     //   ROBOT_STEPPER_MOTORS[0].runToNewPosition(ROBOT_STEPPER_MAX_POSITION_0 / 2);
 
 //     // #ifndef DONT_HOME_1_AND_2
@@ -169,7 +169,7 @@
 //     //   ROBOT_STEPPER_MOTORS[2].runToNewPosition(450 * MICRO_STEPPING_ARM);
 //     // #endif
 
-//     //   // HOME_STEPPER(ROBOT_STEPPER_MOTORS[1], END_SWITCH_1);
+//       // HOME_STEPPER(ROBOT_STEPPER_MOTORS[1], END_SWITCH_1);
 //     //   ROBOT_STEPPER_MOTORS[1].runToNewPosition(ROBOT_STEPPER_MAX_POSITION_1);
 
 //     // #ifndef DONT_HOME_2

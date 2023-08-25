@@ -16,6 +16,7 @@
 #define SerialHandler_H
 #include "advancedSerial.h"
 #include "Robot.h"
+#include "MobileBase.h"
 #include <inttypes.h>
 
 enum SerialConnectionApp
@@ -38,8 +39,10 @@ public:
     void printGains();
     void printLimits();
     Stream &getSerial();
+    void setRobot(Robot *robot);
 
 private:
+    Robot *robot;
     SerialConnectionApp _app = UNITY;
     float _printFrequency = 50;
     bool _debug = false;
