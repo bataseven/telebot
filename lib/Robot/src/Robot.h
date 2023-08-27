@@ -33,6 +33,7 @@ class Robot
 {
 private:
     Stream *serial;
+    float _getBatteryPercentage(uint32_t pin);
 
 public:
     Robot();
@@ -40,6 +41,7 @@ public:
     MobileBase *base;
     RoboticArm *arm;
     void setSerial(Stream &serial);
+    float batteryPercentage;
 };
 
 #endif

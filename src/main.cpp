@@ -2,7 +2,7 @@
 #include "Robot.h"
 #include "SerialHandler.h"
 
-#define SERIAL_PORT Serial1
+#define SERIAL_PORT Serial
 #define SERIAL_BAUD_RATE 115200
 
 Robot *robot;
@@ -17,11 +17,11 @@ void setup()
     robot = new Robot();
     SH.setRobot(robot);
     // Blink the LED yellow until the serial connection is established.
-    while (!SERIAL_PORT)
-    {
-        digitalWrite(13, millis() / 1000 % 2 == 0);
-        delay(1);
-    }
+    // while (!SERIAL_PORT)
+    // {
+    //     digitalWrite(13, millis() / 1000 % 2 == 0);
+    //     delay(1);
+    // }
     SH.setPrintFrequency(0);
 }
 void loop()

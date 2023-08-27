@@ -68,7 +68,7 @@
 // float gearRatio = 5 + 2 / 11.0;
 // float beltRatio = 60 / 36.0;
 // float beltRatio2 = 100 / 20.0;
-// int stepPerRev = 200;
+// int stepPerRev = 200;    
 
 // float Battery_Percent;
 // float Battery_Voltage;
@@ -124,8 +124,8 @@
 //         WHEEL_STEPPER_MOTORS[i].setAcceleration(150000);
 //     }
 
-//     Battery_Voltage = Calculate_Battery_Voltage(A22);  // Returns Voltage
-//     Battery_Percent = map(Battery_Voltage, 9.1, 12.6, 0, 100);
+// Battery_Voltage = Calculate_Battery_Voltage(A22);  // Returns Voltage
+// Battery_Percent = map(Battery_Voltage, 9.1, 12.6, 0, 100);
 
 //     // while (Battery_Percent <= 0) {
 //     //   if ((millis() / 500) % 2 == 0)  // Make the LED blink in red every half a second
@@ -179,17 +179,18 @@
 
 //     // #endif
 
-//     //   ROBOT_STEPS[0] =  stepPerRev * beltRatio2 * MICRO_STEPPING_ARM * RECEIVED_ANGLES[0] / 360 +
-//     //   ROBOT_STEPPER_MAX_POSITION_0 / 2; ROBOT_STEPS[1] = ROBOT_STEPPER_MAX_POSITION_1; ROBOT_STEPS[2] =  stepPerRev *
-//     //   beltRatio  * gearRatio * MICRO_STEPPING_ARM * RECEIVED_ANGLES[1] / 360 + 5000; // Convert received angle to
-//     //   steps
+//   ROBOT_STEPS[0] =  stepPerRev * beltRatio2 * MICRO_STEPPING_ARM * RECEIVED_ANGLES[0] / 360 +
+//   ROBOT_STEPPER_MAX_POSITION_0 / 2; ROBOT_STEPS[1] = ROBOT_STEPPER_MAX_POSITION_1;
+//   ROBOT_STEPS[2] =
+// stepPerRev * beltRatio  * gearRatio * MICRO_STEPPING_ARM * RECEIVED_ANGLES[1] / 360 + 5000; // Convert received angle to
+//   steps
 
 //     //   Serial.println("Homing completed for all!");
 
 //     // #endif
 
 //     Serial.println("Starting program");
-    
+
 // }
 
 // void loop() {
