@@ -1,9 +1,9 @@
 #ifndef Robot_H
 #define Robot_H
 #include "Arduino.h"
-#include "RoboticArm.h"
 #include "MobileBase.h"
-// #include "SerialHandler.h"
+#include "RoboticArm.h"
+#include "SongPlayer.h"
 
 #define FRONT_LEFT_STEP_PIN 4
 #define FRONT_LEFT_DIR_PIN 6
@@ -29,17 +29,23 @@
 #define MAX_BASE_SPEED 0.5        // m/s
 #define MAX_BASE_ANGULAR_SPEED PI // rad/s
 
-class Robot
-{
+#define RED_PIN 14
+#define GREEN_PIN 15
+#define BLUE_PIN 16
+
+class Robot {
 private:
     Stream *serial;
     float _getBatteryPercentage(uint32_t pin);
+    void LED(uint32_t r, uint32_t g, uint32_t b);
+    void LED(char color);
 
 public:
     Robot();
     void update();
     MobileBase *base;
     RoboticArm *arm;
+    SongPlayer *songPlayer;
     void setSerial(Stream &serial);
     float batteryPercentage;
 };

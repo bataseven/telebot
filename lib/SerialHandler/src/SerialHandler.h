@@ -14,19 +14,17 @@
 """*/
 #ifndef SerialHandler_H
 #define SerialHandler_H
-#include "advancedSerial.h"
-#include "Robot.h"
 #include "MobileBase.h"
+#include "Robot.h"
+#include "advancedSerial.h"
 #include <inttypes.h>
 
-enum SerialConnectionApp
-{
+enum SerialConnectionApp {
     UNITY = 0,
     HAPTIC_SERIAL_INTERFACE = 1,
 };
 
-class SerialHandler : public advancedSerial
-{
+class SerialHandler : public advancedSerial {
 public:
     void update();
     void setSerial(Stream &serial);

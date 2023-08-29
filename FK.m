@@ -6,9 +6,13 @@ L1 = 46.4; % mm
 L2 = 181.1; % mm
 L3 = 194.3; % mm
 
-theta1 = 0; % deg
-theta2 = 0; % deg
-theta3 = 0; % deg
+L1 = 46.4; % mm
+L2 = 181.1; % mm
+L3 = 177.3; % mm
+
+theta1 = 10; % deg
+theta2 = 20; % deg
+theta3 = 30; % deg
 
 syms alpha_i_minus_one ...
     a_i_minus_one ...
@@ -124,6 +128,8 @@ alpha2_dot = J_inv(2,1)*desired_x_dot + J_inv(2,2)*desired_y_dot + J_inv(2,3)*de
 alpha3_dot = J_inv(3,1)*desired_x_dot + J_inv(3,2)*desired_y_dot + J_inv(3,3)*desired_z_dot;
 
 % substitute alpha1, alpha2, alpha3 with theta1, theta2, theta3. And calculate
-a1 = eval(subs(alpha1_dot, [alpha1 alpha2 alpha3], [theta1 theta2 theta3]))
-a2 = eval(subs(alpha2_dot, [alpha1 alpha2 alpha3], [theta1 theta2 theta3]))
-a3 = eval(subs(alpha3_dot, [alpha1 alpha2 alpha3], [theta1 theta2 theta3]))
+a1 = eval(subs(alpha1_dot, [alpha1 alpha2 alpha3], [theta1 theta2 theta3]));
+a2 = eval(subs(alpha2_dot, [alpha1 alpha2 alpha3], [theta1 theta2 theta3]));
+a3 = eval(subs(alpha3_dot, [alpha1 alpha2 alpha3], [theta1 theta2 theta3]));
+
+ccode(J_inv)
